@@ -20,6 +20,7 @@
 #include "constants/battle_move_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
+#include "constants/trainers.h"
 
 // this file's functions
 static bool32 AI_ShouldHeal(enum BattlerId battler, u32 healAmount);
@@ -43,6 +44,17 @@ bool32 ShouldUseItem(enum BattlerId battler)
 
     if (AiExpectsToFaintPlayer(battler))
         return FALSE;
+
+    if (!B_LEADERS_USE_ITEMS && (gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+    {
+        enum TrainerClassID trainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
+        if (trainerClass == TRAINER_CLASS_LEADER
+         || trainerClass == TRAINER_CLASS_ELITE_FOUR
+         || trainerClass == TRAINER_CLASS_CHAMPION
+         || trainerClass == TRAINER_CLASS_ELITE_FOUR_FRLG
+         || trainerClass == TRAINER_CLASS_CHAMPION_FRLG)
+            return FALSE;
+    }
 
     for (u32 itemIndex = 0; itemIndex < MAX_TRAINER_ITEMS; itemIndex++)
     {
