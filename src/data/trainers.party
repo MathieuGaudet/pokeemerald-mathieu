@@ -4838,7 +4838,6 @@ Geodude-Alola @ Oran Berry
 Level: 14
 Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Tera Type: Rock
 - Spark
 - Rock Throw
 - Rock Tomb
@@ -4849,7 +4848,6 @@ Level: 15
 Ability: Steam Engine
 IVs: 30 HP / 31 Atk / 30 Def / 30 SpA / 31 SpD / 30 Spe
 Nature: Relaxed
-Tera Type: Rock
 - Hidden Power
 - Smack Down
 
@@ -4858,7 +4856,6 @@ Level: 15
 Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
-Tera Type: Rock
 - Bulldoze
 - Spark
 - Rock Blast
