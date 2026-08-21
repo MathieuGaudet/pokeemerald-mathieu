@@ -52,6 +52,22 @@ PetalburgCity_PokemonCenter_1F_EventScript_SayMudkipType::
 	msgbox PetalburgCity_PokemonCenter_1F_Text_MudkipIsWaterType, MSGBOX_DEFAULT
 	return
 
+PetalburgCity_PokemonCenter_1F_EventScript_CandyMan::
+	lock
+	faceplayer
+	msgbox PetalburgCity_PokemonCenter_1F_Text_WantInfiniteCandiesAndMasterballs, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PetalburgCity_PokemonCenter_1F_EventScript_DeclineCandies
+	giveitem ITEM_RARE_CANDY, 999
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	giveitem ITEM_MASTER_BALL, 999
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	release
+	end
+
+PetalburgCity_PokemonCenter_1F_EventScript_DeclineCandies::
+	release
+	end
+
 PetalburgCity_PokemonCenter_1F_Text_PCStorageSystem:
 	.string "That PC-based POKéMON Storage\n"
 	.string "System…\p"
@@ -91,4 +107,8 @@ PetalburgCity_PokemonCenter_1F_Text_MudkipIsWaterType:
 	.string "It's strong against the FIRE type.\p"
 	.string "But, it's weak against GRASS-type\n"
 	.string "and ELECTRIC-type POKéMON.$"
+
+PetalburgCity_PokemonCenter_1F_Text_WantInfiniteCandiesAndMasterballs:
+	.string "Do you want infinite candies and\n"
+	.string "Masterballs?$"
 
