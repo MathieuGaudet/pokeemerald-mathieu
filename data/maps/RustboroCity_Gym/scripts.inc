@@ -2,7 +2,26 @@ RustboroCity_Gym_MapScripts::
 	.byte 0
 
 RustboroCity_Gym_EventScript_Roxanne::
-	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_RUSTBORO_GYM, RustboroCity_Gym_EventScript_RoxannePostGym
+	msgbox RustboroCity_Gym_Text_RoxanneIntro, MSGBOX_DEFAULT
+	msgbox RustboroCity_Gym_Text_RoxanneTeamChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RustboroCity_Gym_EventScript_RoxanneBattleMathieu
+	goto RustboroCity_Gym_EventScript_RoxanneBattleOriginal
+	end
+
+RustboroCity_Gym_EventScript_RoxanneBattleOriginal::
+	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneAcceptOriginal, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
+	goto RustboroCity_Gym_EventScript_RoxannePostGym
+	end
+
+RustboroCity_Gym_EventScript_RoxanneBattleMathieu::
+	trainerbattle_single TRAINER_ROXANNE_MATHIEU, RustboroCity_Gym_Text_RoxanneAcceptMathieu, RustboroCity_Gym_Text_RoxanneMathieuDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
+	goto RustboroCity_Gym_EventScript_RoxannePostGym
+	end
+
+RustboroCity_Gym_EventScript_RoxannePostGym::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_RoxanneRematch
 	goto_if_unset FLAG_RECEIVED_TM_ROCK_TOMB, RustboroCity_Gym_EventScript_GiveRockTomb
@@ -184,9 +203,36 @@ RustboroCity_Gym_Text_RoxanneIntro:
 	.string "Would you kindly demonstrate how you\n"
 	.string "battle, and with which POKéMON?$"
 
+RustboroCity_Gym_Text_RoxanneTeamChoice:
+	.string "Actually, I have prepared a second\n"
+	.string "team as well, put together by my\l"
+	.string "friend MATHIEU.\p"
+	.string "Would you like to battle that team\n"
+	.string "instead of my official GYM team?$"
+
+RustboroCity_Gym_Text_RoxanneAcceptOriginal:
+	.string "Very well! Let's see what you can\n"
+	.string "do!$"
+
+RustboroCity_Gym_Text_RoxanneAcceptMathieu:
+	.string "All right, let's see how you handle\n"
+	.string "MATHIEU's POKéMON!$"
+
 RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "So…\n"
 	.string "I lost…\p"
+	.string "It seems that I still have much more\n"
+	.string "to learn…\p"
+	.string "I understand.\p"
+	.string "The POKéMON LEAGUE's rules state\n"
+	.string "that TRAINERS are to be given this\l"
+	.string "if they defeat a GYM LEADER.\p"
+	.string "Please accept the official POKéMON\n"
+	.string "LEAGUE STONE BADGE.$"
+
+RustboroCity_Gym_Text_RoxanneMathieuDefeat:
+	.string "So…\n"
+	.string "I lost, even with this team…\p"
 	.string "It seems that I still have much more\n"
 	.string "to learn…\p"
 	.string "I understand.\p"

@@ -4824,6 +4824,46 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Tackle
 - Rock Tomb
 
+=== TRAINER_ROXANNE_MATHIEU ===
+Name: ROXANNE
+Class: Leader
+Pic: Leader Roxanne
+Gender: Female
+Music: Female
+Items: Potion / Potion
+Double Battle: No
+AI: Basic Trainer
+
+Geodude-Alola @ Oran Berry
+Level: 14
+Ability: Sturdy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Tera Type: Rock
+- Spark
+- Rock Throw
+- Rock Tomb
+- Sandstorm
+
+Rolycoly @ Weakness Policy
+Level: 15
+Ability: Steam Engine
+IVs: 30 HP / 31 Atk / 30 Def / 30 SpA / 31 SpD / 30 Spe
+Nature: Relaxed
+Tera Type: Rock
+- Hidden Power
+- Smack Down
+
+Nosepass @ Berry Juice
+Level: 15
+Ability: Sturdy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Impish
+Tera Type: Rock
+- Bulldoze
+- Spark
+- Rock Blast
+- Thunder Wave
+
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY
 Class: Leader
