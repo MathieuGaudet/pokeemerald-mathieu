@@ -1743,3 +1743,13 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/MathieuHouse/scripts.inc"
 
 	.include "data/maps/MathieuHouse_2/scripts.inc"
+
+	.include "data/maps/PetalburgDepths_B1F/scripts.inc"
+
+	.include "data/maps/PetalburgDepths_B2F/scripts.inc"
+
+	.include "data/maps/PetalburgDepths_B3F/scripts.inc"
+
+	.include "data/maps/PetalburgDepths_B4F/scripts.inc"
+
+	.include "data/maps/PetalburgDepths_B5F/scripts.inc"

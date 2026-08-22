@@ -148,3 +148,17 @@ MathieuHouse_2_Text_BagFullDuskStone:
 MathieuHouse_2_Text_GuyFarewell:
 	.string "That's all I've got for now. Come\n"
 	.string "back if MATHIEU sends more my way!$"
+
+MathieuHouse_2_EventScript_DepthsSign::
+	lockall
+	msgbox MathieuHouse_2_Text_DepthsSign, MSGBOX_SIGN
+	releaseall
+	return
+
+MathieuHouse_2_Text_DepthsSign:
+	.string "A hatch is set into the floor\n"
+	.string "beside this display… it looks like\l"
+	.string "it leads deep underground.\p"
+	.string "PETALBURG DEPTHS\n"
+	.string "The way down gets tougher the\l"
+	.string "farther you go.$"

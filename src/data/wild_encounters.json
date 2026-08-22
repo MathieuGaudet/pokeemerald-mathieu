@@ -37422,6 +37422,351 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_PETALBURG_DEPTHS_B1F",
+          "base_label": "gPetalburgDepths_B1F",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_WHISMUR"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_MAKUHITA"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_NOSEPASS"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_POOCHYENA"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 18,
+                "max_level": 19,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 18,
+                "max_level": 19,
+                "species": "SPECIES_LARVITAR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PETALBURG_DEPTHS_B2F",
+          "base_label": "gPetalburgDepths_B2F",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 21,
+                "max_level": 24,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 21,
+                "max_level": 24,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 24,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 21,
+                "max_level": 24,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 21,
+                "max_level": 24,
+                "species": "SPECIES_NOSEPASS"
+              },
+              {
+                "min_level": 21,
+                "max_level": 24,
+                "species": "SPECIES_LOUDRED"
+              },
+              {
+                "min_level": 21,
+                "max_level": 24,
+                "species": "SPECIES_SPINARAK"
+              },
+              {
+                "min_level": 21,
+                "max_level": 24,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 21,
+                "max_level": 24,
+                "species": "SPECIES_MEDITITE"
+              },
+              {
+                "min_level": 21,
+                "max_level": 24,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 23,
+                "max_level": 24,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 23,
+                "max_level": 24,
+                "species": "SPECIES_GLIGAR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PETALBURG_DEPTHS_B3F",
+          "base_label": "gPetalburgDepths_B3F",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_DUSKULL"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_MIGHTYENA"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_SHUPPET"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_SPINARAK"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_ARIADOS"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_SKORUPI"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_MACHOKE"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_RIOLU"
+              },
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_RIOLU"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PETALBURG_DEPTHS_B4F",
+          "base_label": "gPetalburgDepths_B4F",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_STEELIX"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_MAROWAK"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_SKORUPI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_MIGHTYENA"
+              },
+              {
+                "min_level": 32,
+                "max_level": 33,
+                "species": "SPECIES_DEINO"
+              },
+              {
+                "min_level": 32,
+                "max_level": 33,
+                "species": "SPECIES_DEINO"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PETALBURG_DEPTHS_B5F",
+          "base_label": "gPetalburgDepths_B5F",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_STEELIX"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_AGGRON"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_DONPHAN"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_MAROWAK"
+              },
+              {
+                "min_level": 36,
+                "max_level": 37,
+                "species": "SPECIES_GIBLE"
+              },
+              {
+                "min_level": 36,
+                "max_level": 37,
+                "species": "SPECIES_GIBLE"
+              }
+            ]
+          }
         }
       ]
     },

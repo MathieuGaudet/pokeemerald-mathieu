@@ -472,7 +472,12 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "PetalburgDepths_B1F",
+    "PetalburgDepths_B2F",
+    "PetalburgDepths_B3F",
+    "PetalburgDepths_B4F",
+    "PetalburgDepths_B5F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

@@ -16966,3 +16966,224 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PETALBURG_DEPTHS_BOSS1 ===
+Name: BOREK
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Items: Full Heal / Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Force Setup First Turn
+
+Graveler @ Leftovers
+Ability: Sturdy
+Level: 19
+Nature: Adamant
+- Rock Blast
+- Earthquake
+- Rock Polish
+- Stone Edge
+
+Sandslash @ Life Orb
+Ability: Sand Rush
+Level: 19
+Nature: Jolly
+- Earthquake
+- Rock Slide
+- Swords Dance
+- Rapid Spin
+
+Probopass @ Choice Scarf
+Ability: Sturdy
+Level: 20
+Nature: Modest
+- Power Gem
+- Earth Power
+- Flash Cannon
+- Volt Switch
+
+=== TRAINER_PETALBURG_DEPTHS_BOSS2 ===
+Name: KESTREL
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Items: Hyper Potion / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Force Setup First Turn
+
+Hitmonchan @ Life Orb
+Ability: Iron Fist
+Level: 24
+Nature: Adamant
+- Mach Punch
+- Ice Punch
+- Thunder Punch
+- Close Combat
+
+Toxicroak @ Choice Band
+Ability: Dry Skin
+Level: 24
+Nature: Adamant
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Poison Jab
+
+Machamp @ Assault Vest
+Ability: No Guard
+Level: 25
+Nature: Adamant
+- Dynamic Punch
+- Knock Off
+- Ice Punch
+- Bullet Punch
+
+=== TRAINER_PETALBURG_DEPTHS_BOSS3 ===
+Name: MORWENNA
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Force Setup First Turn
+
+Mismagius @ Choice Specs
+Ability: Levitate
+Level: 29
+Nature: Timid
+- Shadow Ball
+- Dazzling Gleam
+- Thunderbolt
+- Power Gem
+
+Absol @ Life Orb
+Ability: Super Luck
+Level: 29
+Nature: Jolly
+- Sucker Punch
+- Knock Off
+- Play Rough
+- Swords Dance
+
+Banette @ Sitrus Berry
+Ability: Frisk
+Level: 29
+Nature: Adamant
+- Shadow Claw
+- Shadow Sneak
+- Destiny Bond
+- Will-O-Wisp
+
+Skuntank @ Assault Vest
+Ability: Aftermath
+Level: 30
+Nature: Careful
+- Crunch
+- Poison Jab
+- Sucker Punch
+- Fire Blast
+
+=== TRAINER_PETALBURG_DEPTHS_BOSS4 ===
+Name: THORVALD
+Class: Dragon Tamer
+Pic: Dragon Tamer
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Max Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Force Setup First Turn
+
+Kingdra @ Choice Specs
+Ability: Sniper
+Level: 33
+Nature: Modest
+- Draco Meteor
+- Surf
+- Ice Beam
+- Dragon Pulse
+
+Weavile @ Choice Band
+Ability: Pressure
+Level: 33
+Nature: Jolly
+- Icicle Crash
+- Knock Off
+- Ice Shard
+- Low Kick
+
+Flygon @ Life Orb
+Ability: Levitate
+Level: 34
+Nature: Naive
+- Dragon Claw
+- Earthquake
+- U-turn
+- Fire Blast
+
+Froslass @ Focus Sash
+Ability: Cursed Body
+Level: 34
+Nature: Timid
+- Blizzard
+- Shadow Ball
+- Destiny Bond
+- Thunderbolt
+
+=== TRAINER_PETALBURG_DEPTHS_BOSS5 ===
+Name: ISOLDE
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore / Max Revive
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Force Setup First Turn
+
+Garchomp @ Choice Scarf
+Ability: Rough Skin
+Level: 37
+Nature: Jolly
+- Earthquake
+- Dragon Claw
+- Stone Edge
+- Iron Head
+
+Hydreigon @ Life Orb
+Ability: Levitate
+Level: 37
+Nature: Modest
+- Draco Meteor
+- Dark Pulse
+- Flamethrower
+- Earth Power
+
+Tyranitar @ Assault Vest
+Ability: Sand Stream
+Level: 38
+Nature: Adamant
+- Stone Edge
+- Crunch
+- Earthquake
+- Ice Punch
+
+Gliscor @ Toxic Orb
+Ability: Poison Heal
+Level: 37
+Nature: Careful
+- Earthquake
+- Toxic
+- Protect
+- Roost
+
+Dragapult @ Choice Band
+Ability: Clear Body
+Level: 38
+Nature: Jolly
+- Dragon Darts
+- Phantom Force
+- U-turn
+- Sucker Punch
