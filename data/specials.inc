@@ -18,6 +18,9 @@
 gSpecials::
 .endif
 	def_special HealPlayerParty
+	def_special QuickMenu_CanFly
+	def_special QuickMenu_Fly, waitstate=1
+	def_special QuickMenu_ToggleInfiniteRepel
 	def_special SetCableClubWarp
 	def_special DoCableClubWarp, waitstate=1
 	def_special ReturnFromLinkRoom, waitstate=1

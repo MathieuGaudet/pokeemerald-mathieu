@@ -1070,6 +1070,8 @@ bool8 UpdateRepelCounter(void)
         return FALSE;
     if (InUnionRoom() == TRUE)
         return FALSE;
+    if (FlagGet(OW_FLAG_INFINITE_REPEL))
+        return FALSE;
 
     if (steps != 0)
     {
