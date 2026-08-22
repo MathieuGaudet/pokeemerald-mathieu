@@ -5,17 +5,39 @@ MathieuHouse_2_EventScript_GiftPokemonGuy::
 	lock
 	faceplayer
 	msgbox MathieuHouse_2_Text_GuyIntro, MSGBOX_DEFAULT
-	goto_if_set FLAG_RECEIVED_GIFT_STARLY, MathieuHouse_2_EventScript_OfferHonedge
-	msgbox MathieuHouse_2_Text_OfferStarly, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MathieuHouse_2_EventScript_OfferHonedge
+	goto MathieuHouse_2_EventScript_GiftMenu
+	end
+
+MathieuHouse_2_EventScript_GiftMenu::
+	msgbox MathieuHouse_2_Text_WhichPokemon, MSGBOX_DEFAULT
+	multichoice 0, 0, MULTI_MATHIEU_GIFT_MON, FALSE
+	switch VAR_RESULT
+	case 0, MathieuHouse_2_EventScript_ChooseStarly
+	case 1, MathieuHouse_2_EventScript_ChooseHonedge
+	case 2, MathieuHouse_2_EventScript_GuyFarewell
+	case MULTI_B_PRESSED, MathieuHouse_2_EventScript_GuyFarewell
+	end
+
+MathieuHouse_2_EventScript_ChooseStarly::
+	goto_if_set FLAG_RECEIVED_GIFT_STARLY, MathieuHouse_2_EventScript_AlreadyGotStarly
+	msgbox MathieuHouse_2_Text_AboutStarly, MSGBOX_DEFAULT
 	goto MathieuHouse_2_EventScript_GiveStarly
 	end
 
-MathieuHouse_2_EventScript_OfferHonedge::
-	goto_if_set FLAG_RECEIVED_GIFT_HONEDGE, MathieuHouse_2_EventScript_GuyFarewell
-	msgbox MathieuHouse_2_Text_OfferHonedge, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MathieuHouse_2_EventScript_GuyFarewell
+MathieuHouse_2_EventScript_AlreadyGotStarly::
+	msgbox MathieuHouse_2_Text_AlreadyGotStarly, MSGBOX_DEFAULT
+	goto MathieuHouse_2_EventScript_GiftMenu
+	end
+
+MathieuHouse_2_EventScript_ChooseHonedge::
+	goto_if_set FLAG_RECEIVED_GIFT_HONEDGE, MathieuHouse_2_EventScript_AlreadyGotHonedge
+	msgbox MathieuHouse_2_Text_AboutHonedge, MSGBOX_DEFAULT
 	goto MathieuHouse_2_EventScript_GiveHonedge
+	end
+
+MathieuHouse_2_EventScript_AlreadyGotHonedge::
+	msgbox MathieuHouse_2_Text_AlreadyGotHonedge, MSGBOX_DEFAULT
+	goto MathieuHouse_2_EventScript_GiftMenu
 	end
 
 MathieuHouse_2_EventScript_GuyFarewell::
@@ -63,7 +85,7 @@ MathieuHouse_2_EventScript_ReceivedStarlyFanfare::
 
 MathieuHouse_2_EventScript_ReceivedStarly::
 	setflag FLAG_RECEIVED_GIFT_STARLY
-	goto MathieuHouse_2_EventScript_OfferHonedge
+	goto MathieuHouse_2_EventScript_GiftMenu
 	end
 
 MathieuHouse_2_EventScript_GiveHonedge::
@@ -109,12 +131,12 @@ MathieuHouse_2_EventScript_ReceivedHonedge::
 	additem ITEM_DUSK_STONE
 	goto_if_eq VAR_RESULT, FALSE, MathieuHouse_2_EventScript_BagFullForDuskStone
 	msgbox MathieuHouse_2_Text_ReceivedDuskStone, MSGBOX_DEFAULT
-	goto MathieuHouse_2_EventScript_GuyFarewell
+	goto MathieuHouse_2_EventScript_GiftMenu
 	end
 
 MathieuHouse_2_EventScript_BagFullForDuskStone::
 	msgbox MathieuHouse_2_Text_BagFullDuskStone, MSGBOX_DEFAULT
-	goto MathieuHouse_2_EventScript_GuyFarewell
+	goto MathieuHouse_2_EventScript_GiftMenu
 	end
 
 MathieuHouse_2_Text_GuyIntro:
@@ -124,17 +146,22 @@ MathieuHouse_2_Text_GuyIntro:
 	.string "his favorite POKéMON and pass them\l"
 	.string "along to trainers he trusts.$"
 
-MathieuHouse_2_Text_OfferStarly:
-	.string "First up, a STARLY.\p"
-	.string "It's a scrappy little thing, but\n"
-	.string "don't let that fool you.\p"
-	.string "Would you like it?$"
+MathieuHouse_2_Text_WhichPokemon:
+	.string "Which one would you like?$"
 
-MathieuHouse_2_Text_OfferHonedge:
-	.string "Next, a HONEDGE.\p"
-	.string "This one's a bit unusual, if you\n"
-	.string "catch my drift.\p"
-	.string "Would you like it?$"
+MathieuHouse_2_Text_AboutStarly:
+	.string "STARLY's a scrappy little thing,\n"
+	.string "but don't let that fool you.$"
+
+MathieuHouse_2_Text_AboutHonedge:
+	.string "HONEDGE's a bit unusual, if you\n"
+	.string "catch my drift.$"
+
+MathieuHouse_2_Text_AlreadyGotStarly:
+	.string "I already gave you the STARLY.$"
+
+MathieuHouse_2_Text_AlreadyGotHonedge:
+	.string "I already gave you the HONEDGE.$"
 
 MathieuHouse_2_Text_ReceivedDuskStone:
 	.string "Oh, and here's a DUSK STONE to go\n"
