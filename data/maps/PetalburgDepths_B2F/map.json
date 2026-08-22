@@ -2,7 +2,7 @@
   "id": "MAP_PETALBURG_DEPTHS_B2F",
   "name": "PetalburgDepths_B2F",
   "layout": "LAYOUT_PETALBURG_DEPTHS_B2F",
-  "music": "MUS_CAVE_OF_ORIGIN",
+  "music": "MUS_ENCOUNTER_ELITE_FOUR",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_PETALBURG_CITY",
   "requires_flash": false,
@@ -17,21 +17,21 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 29,
-      "y": 13,
+      "x": 6,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PetalburgDepths_B2F_EventScript_Boss",
-      "flag": "FLAG_DEFEATED_PETALBURG_DEPTHS_B2F"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 12,
-      "y": 12,
+      "x": 6,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -40,20 +40,33 @@
       "trainer_sight_or_berry_tree_id": "ITEM_CHOICE_BAND",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_PETALBURG_DEPTHS_B2F_CHOICE_BAND"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
+      "x": 3,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PetalburgDepths_B2F_EventScript_WildPatch",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 25,
+      "x": 6,
       "y": 13,
       "elevation": 3,
-      "dest_map": "MAP_PETALBURG_DEPTHS_B1F",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_MATHIEU_HOUSE_2",
+      "dest_warp_id": "2"
     },
     {
-      "x": 29,
-      "y": 13,
-      "elevation": 3,
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
       "dest_map": "MAP_PETALBURG_DEPTHS_B3F",
       "dest_warp_id": "0"
     }

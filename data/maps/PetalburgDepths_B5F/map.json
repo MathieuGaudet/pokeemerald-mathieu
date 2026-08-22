@@ -2,7 +2,7 @@
   "id": "MAP_PETALBURG_DEPTHS_B5F",
   "name": "PetalburgDepths_B5F",
   "layout": "LAYOUT_PETALBURG_DEPTHS_B5F",
-  "music": "MUS_CAVE_OF_ORIGIN",
+  "music": "MUS_ENCOUNTER_ELITE_FOUR",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_PETALBURG_CITY",
   "requires_flash": false,
@@ -17,21 +17,21 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
-      "x": 9,
-      "y": 13,
+      "x": 6,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PetalburgDepths_B5F_EventScript_Boss",
-      "flag": "FLAG_DEFEATED_PETALBURG_DEPTHS_B5F"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 9,
-      "y": 14,
+      "x": 6,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -40,15 +40,28 @@
       "trainer_sight_or_berry_tree_id": "ITEM_LIFE_ORB",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_PETALBURG_DEPTHS_B5F_LIFE_ORB"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
+      "x": 3,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PetalburgDepths_B5F_EventScript_WildPatch",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 9,
-      "y": 3,
+      "x": 6,
+      "y": 12,
       "elevation": 3,
-      "dest_map": "MAP_PETALBURG_DEPTHS_B4F",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_MATHIEU_HOUSE_2",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],

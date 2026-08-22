@@ -9347,10 +9347,10 @@
     {
       "id": "LAYOUT_PETALBURG_DEPTHS_B1F",
       "name": "PetalburgDepths_B1F_Layout",
-      "width": 42,
-      "height": 15,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "width": 13,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/PetalburgDepths_B1F/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgDepths_B1F/map.bin",
       "layout_version": "emerald"
@@ -9358,10 +9358,10 @@
     {
       "id": "LAYOUT_PETALBURG_DEPTHS_B2F",
       "name": "PetalburgDepths_B2F_Layout",
-      "width": 32,
-      "height": 26,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "width": 13,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/PetalburgDepths_B2F/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgDepths_B2F/map.bin",
       "layout_version": "emerald"
@@ -9369,10 +9369,10 @@
     {
       "id": "LAYOUT_PETALBURG_DEPTHS_B3F",
       "name": "PetalburgDepths_B3F_Layout",
-      "width": 32,
-      "height": 26,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "width": 13,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/PetalburgDepths_B3F/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgDepths_B3F/map.bin",
       "layout_version": "emerald"
@@ -9380,10 +9380,10 @@
     {
       "id": "LAYOUT_PETALBURG_DEPTHS_B4F",
       "name": "PetalburgDepths_B4F_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "width": 13,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/PetalburgDepths_B4F/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgDepths_B4F/map.bin",
       "layout_version": "emerald"
@@ -9391,10 +9391,10 @@
     {
       "id": "LAYOUT_PETALBURG_DEPTHS_B5F",
       "name": "PetalburgDepths_B5F_Layout",
-      "width": 19,
-      "height": 19,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/PetalburgDepths_B5F/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgDepths_B5F/map.bin",
       "layout_version": "emerald"
