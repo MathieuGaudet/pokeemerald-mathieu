@@ -84,6 +84,7 @@ SootopolisCity_Gym_1F_EventScript_Juan::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_JuanRematch
 	goto_if_unset FLAG_RECEIVED_TM_WATER_PULSE, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2
+	goto_if_unset FLAG_RECEIVED_JUAN_MEGA_STONES, SootopolisCity_Gym_1F_EventScript_GiveMegaStones2
 	goto_if_unset FLAG_BADGE06_GET, SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge
 	msgbox SootopolisCity_Gym_1F_Text_JuanPostBattle, MSGBOX_DEFAULT
 	release
@@ -104,6 +105,7 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 	setvar VAR_0x8008, 8
 	call Common_EventScript_SetGymTrainers
 	call SootopolisCity_Gym_1F_EventScript_GiveWaterPulse
+	call SootopolisCity_Gym_1F_EventScript_GiveMegaStones
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
@@ -127,6 +129,38 @@ SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox SootopolisCity_Gym_1F_Text_ExplainWaterPulse, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_WATER_PULSE
+	release
+	end
+
+SootopolisCity_Gym_1F_EventScript_GiveMegaStones::
+	additem ITEM_GYARADOSITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_FLOETTITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_BAXCALIBRITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_DIANCITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_DRAGONINITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_GARCHOMPITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_GARCHOMPITE_Z
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_MAGEARNITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_METAGROSSITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_SALAMENCITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_TYRANITARITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	msgbox SootopolisCity_Gym_1F_Text_ExplainMegaStones, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_JUAN_MEGA_STONES
+	return
+
+SootopolisCity_Gym_1F_EventScript_GiveMegaStones2::
+	call SootopolisCity_Gym_1F_EventScript_GiveMegaStones
 	release
 	end
 
@@ -252,6 +286,12 @@ SootopolisCity_Gym_1F_Text_ExplainWaterPulse:
 	.string "In use, it will occasionally confuse\n"
 	.string "the target with ultrasonic waves.\p"
 	.string "… … … … … …$"
+
+SootopolisCity_Gym_1F_Text_ExplainMegaStones:
+	.string "And this… A collection of MEGA\n"
+	.string "STONES, gathered over the course\l"
+	.string "of my performances.\p"
+	.string "They are yours now. Use them well.$"
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan:
 	.string "Registered GYM LEADER JUAN\n"

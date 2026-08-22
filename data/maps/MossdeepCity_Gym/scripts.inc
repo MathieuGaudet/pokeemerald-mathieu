@@ -58,6 +58,7 @@ MossdeepCity_Gym_EventScript_TateAndLiza::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLizaRematch
 	goto_if_unset FLAG_RECEIVED_TM_CALM_MIND, MossdeepCity_Gym_EventScript_GiveCalmMind2
+	goto_if_unset FLAG_RECEIVED_TATE_AND_LIZA_MEGA_STONES, MossdeepCity_Gym_EventScript_GiveMegaStones2
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -83,6 +84,7 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STATE, 1
 	call MossdeepCity_Gym_EventScript_GiveCalmMind
+	call MossdeepCity_Gym_EventScript_GiveMegaStones
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
@@ -108,6 +110,50 @@ MossdeepCity_Gym_EventScript_GiveCalmMind::
 	msgbox MossdeepCity_Gym_Text_ExplainCalmMind, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_CALM_MIND
 	return
+
+MossdeepCity_Gym_EventScript_GiveMegaStones::
+	additem ITEM_HAWLUCHANITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_HERACRONITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_SCIZORITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_PYROARITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_EXCADRITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_STEELIXITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_AERODACTYLITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_EELEKTROSSITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_GALLADITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_GARDEVOIRITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_CHANDELURITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_STARMINITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_GLIMMORANITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_LUCARIONITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_LUCARIONITE_Z
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_AGGRONITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_GOLISOPITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	msgbox MossdeepCity_Gym_Text_ExplainMegaStones, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_TATE_AND_LIZA_MEGA_STONES
+	return
+
+MossdeepCity_Gym_EventScript_GiveMegaStones2::
+	call MossdeepCity_Gym_EventScript_GiveMegaStones
+	release
+	end
 
 MossdeepCity_Gym_EventScript_TateAndLizaRematch::
 	trainerbattle_rematch_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
@@ -589,6 +635,12 @@ MossdeepCity_Gym_Text_ExplainCalmMind:
 	.string "TATE: It's a move that's perfect…\n"
 	.string "LIZA: For PSYCHIC POKéMON!\p"
 	.string "… … … … … …$"
+
+MossdeepCity_Gym_Text_ExplainMegaStones:
+	.string "TATE: We also foresaw that you'd\n"
+	.string "want more MEGA STONES…\p"
+	.string "LIZA: So here, have the ones we've\n"
+	.string "collected!$"
 
 MossdeepCity_Gym_Text_RegisteredTateAndLiza:
 	.string "Registered GYM LEADERS TATE & LIZA\n"

@@ -330,6 +330,7 @@ PetalburgCity_Gym_EventScript_NormanPostBattle::
 	call PetalburgCity_Gym_EventScript_ShouldGiveEnigmaBerry
 	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_GiveEnigmaBerry
 	goto_if_unset FLAG_RECEIVED_TM_FACADE, PetalburgCity_Gym_EventScript_GiveFacade2
+	goto_if_unset FLAG_RECEIVED_NORMAN_MEGA_STONES, PetalburgCity_Gym_EventScript_GiveMegaStones2
 	goto_if_set FLAG_SYS_GAME_CLEAR, PetalburgCity_Gym_EventScript_NoAmountOfTrainingIsEnough
 	msgbox PetalburgCity_Gym_Text_DadGoingToKeepTraining, MSGBOX_DEFAULT
 	release
@@ -388,6 +389,7 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	call PetalburgCity_Gym_EventScript_UnlockAllDoors
 	special DrawWholeMapView
 	call PetalburgCity_Gym_EventScript_GiveFacade
+	call PetalburgCity_Gym_EventScript_GiveMegaStones
 	delay 30
 	msgbox PetalburgCity_Gym_Text_DadHappyAndSad, MSGBOX_DEFAULT
 	closemessage
@@ -407,6 +409,50 @@ PetalburgCity_Gym_EventScript_GiveFacade::
 	setflag FLAG_RECEIVED_TM_FACADE
 	msgbox PetalburgCity_Gym_Text_ExplainFacade, MSGBOX_DEFAULT
 	return
+
+PetalburgCity_Gym_EventScript_GiveMegaStones::
+	additem ITEM_MAWILITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_SABLENITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_BEEDRILLITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_AUDINITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_BANETTITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_CAMERUPTITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_SHARPEDONITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_ABSOLITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_ABSOLITE_Z
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_SKARMORITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_MEOWSTICITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_FALINKSITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_MANECTITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_TATSUGIRINITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_CRABOMINITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_PIDGEOTITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_FROSLASSITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	msgbox PetalburgCity_Gym_Text_ExplainMegaStones, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_NORMAN_MEGA_STONES
+	return
+
+PetalburgCity_Gym_EventScript_GiveMegaStones2::
+	call PetalburgCity_Gym_EventScript_GiveMegaStones
+	release
+	end
 
 PetalburgCity_Gym_EventScript_WallysDadArrivesNorth::
 	setvar VAR_0x8008, 1
@@ -1293,6 +1339,12 @@ PetalburgCity_Gym_Text_ExplainFacade:
 	.string "or burned.\p"
 	.string "It might be able to turn a bad\n"
 	.string "situation into an advantage.$"
+
+PetalburgCity_Gym_Text_ExplainMegaStones:
+	.string "DAD: Oh, before I forget…\p"
+	.string "I picked up some more MEGA STONES\n"
+	.string "than I can put to good use myself.\l"
+	.string "Take them off my hands, would you?$"
 
 PetalburgCity_Gym_Text_DadHappyAndSad:
 	.string "DAD: As the GYM LEADER, I can't\n"

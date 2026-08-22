@@ -48,6 +48,8 @@ LavaridgeTown_Gym_1F_EventScript_Flannery::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_FlanneryRematch
 	goto_if_unset FLAG_RECEIVED_TM_OVERHEAT, LavaridgeTown_Gym_1F_EventScript_GiveOverheat2
+	goto_if_unset FLAG_RECEIVED_MEGA_RING, LavaridgeTown_Gym_1F_EventScript_GiveMegaRing2
+	goto_if_unset FLAG_RECEIVED_FLANNERY_MEGA_STONES, LavaridgeTown_Gym_1F_EventScript_GiveMegaStones2
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -67,6 +69,8 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
 	call LavaridgeTown_Gym_1F_EventScript_GiveOverheat
+	call LavaridgeTown_Gym_1F_EventScript_GiveMegaRing
+	call LavaridgeTown_Gym_1F_EventScript_GiveMegaStones
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
@@ -92,6 +96,54 @@ LavaridgeTown_Gym_1F_EventScript_GiveOverheat::
 	msgbox LavaridgeTown_Gym_1F_Text_ExplainOverheat, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_OVERHEAT
 	return
+
+LavaridgeTown_Gym_1F_EventScript_GiveMegaRing::
+	giveitem ITEM_MEGA_RING
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	msgbox LavaridgeTown_Gym_1F_Text_ExplainMegaRing, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_MEGA_RING
+	return
+
+LavaridgeTown_Gym_1F_EventScript_GiveMegaRing2::
+	call LavaridgeTown_Gym_1F_EventScript_GiveMegaRing
+	release
+	end
+
+LavaridgeTown_Gym_1F_EventScript_GiveMegaStones::
+	additem ITEM_VENUSAURITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_CHARIZARDITE_X
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_CHARIZARDITE_Y
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_BLASTOISINITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_MEGANIUMITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_FERALIGITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_SCEPTILITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_BLAZIKENITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_SWAMPERTITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_EMBOARITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_DELPHOXITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_CHESNAUGHTITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_GRENINJITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	msgbox LavaridgeTown_Gym_1F_Text_ExplainMegaStones, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_FLANNERY_MEGA_STONES
+	return
+
+LavaridgeTown_Gym_1F_EventScript_GiveMegaStones2::
+	call LavaridgeTown_Gym_1F_EventScript_GiveMegaStones
+	release
+	end
 
 LavaridgeTown_Gym_1F_EventScript_FlanneryRematch::
 	trainerbattle_rematch_double TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
@@ -346,6 +398,19 @@ LavaridgeTown_Gym_1F_Text_ExplainOverheat:
 	.string "But it also sharply cuts the SP. ATK\n"
 	.string "of the POKéMON using it. It might not\l"
 	.string "be suitable for longer battles.$"
+
+LavaridgeTown_Gym_1F_Text_ExplainMegaRing:
+	.string "Oh, and one more thing!\p"
+	.string "Take this MEGA RING. Wear it, and\n"
+	.string "your POKéMON will be able to Mega\l"
+	.string "Evolve in battle, as long as they're\l"
+	.string "holding the right MEGA STONE.$"
+
+LavaridgeTown_Gym_1F_Text_ExplainMegaStones:
+	.string "I've also picked up a bunch of MEGA\n"
+	.string "STONES on my travels. Here, have\l"
+	.string "them! They should suit your starter\l"
+	.string "POKéMON and its evolutions nicely.$"
 
 LavaridgeTown_Gym_1F_Text_RegisteredFlannery:
 	.string "Registered GYM LEADER FLANNERY\n"

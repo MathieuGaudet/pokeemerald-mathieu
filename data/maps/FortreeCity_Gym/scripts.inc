@@ -22,6 +22,7 @@ FortreeCity_Gym_EventScript_Winona::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_WinonaRematch
 	goto_if_unset FLAG_RECEIVED_TM_AERIAL_ACE, FortreeCity_Gym_EventScript_GiveAerialAce2
+	goto_if_unset FLAG_RECEIVED_WINONA_MEGA_STONES, FortreeCity_Gym_EventScript_GiveMegaStones2
 	msgbox FortreeCity_Gym_Text_WinonaPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -36,6 +37,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
 	call FortreeCity_Gym_EventScript_GiveAerialAce
+	call FortreeCity_Gym_EventScript_GiveMegaStones
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
@@ -63,6 +65,48 @@ FortreeCity_Gym_EventScript_GiveAerialAce::
 	msgbox FortreeCity_Gym_Text_ExplainAerialAce, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_AERIAL_ACE
 	return
+
+FortreeCity_Gym_EventScript_GiveMegaStones::
+	additem ITEM_GLALITITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_LOPUNNITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_MALAMARITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_CLEFABLITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_GOLURKITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_RAICHUNITE_X
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_RAICHUNITE_Y
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_SCOLIPITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_STARAPTITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_SCOVILLAINITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_SCRAFTINITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_ALTARIANITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_KANGASKHANITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_VICTREEBELITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_ABOMASITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	additem ITEM_GENGARITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	msgbox FortreeCity_Gym_Text_ExplainMegaStones, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_WINONA_MEGA_STONES
+	return
+
+FortreeCity_Gym_EventScript_GiveMegaStones2::
+	call FortreeCity_Gym_EventScript_GiveMegaStones
+	release
+	end
 
 FortreeCity_Gym_EventScript_WinonaRematch::
 	trainerbattle_rematch_double TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
@@ -267,6 +311,11 @@ FortreeCity_Gym_Text_ExplainAerialAce:
 	.string "Its speed…\n"
 	.string "No POKéMON should be able to avoid it.\p"
 	.string "… … … … … …$"
+
+FortreeCity_Gym_Text_ExplainMegaStones:
+	.string "I've also gathered a flock of MEGA\n"
+	.string "STONES on my travels through the\l"
+	.string "skies. Take them with you.$"
 
 FortreeCity_Gym_Text_RegisteredWinona:
 	.string "Registered GYM LEADER WINONA\n"
