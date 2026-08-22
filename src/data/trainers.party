@@ -4895,6 +4895,58 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Reversal
 - Bulk Up
 
+=== TRAINER_BRAWLY_MATHIEU ===
+Name: BRAWLY
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Male
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Basic Trainer
+
+Machop @ Choice Band
+Ability: No Guard
+Level: 23
+Nature: Jolly
+- Dynamic Punch
+
+Hitmontop @ Expert Belt
+Ability: Intimidate
+Level: 24
+Nature: Adamant
+- Fake Out
+- Sucker Punch
+- Low Sweep
+- Triple Axel
+
+Monferno @ Air Balloon
+Ability: Iron Fist
+Level: 25
+Nature: Adamant
+- Fire Punch
+- Knock Off
+- Mach Punch
+- Rock Tomb
+
+Falinks @ Leftovers
+Ability: Battle Armor
+Level: 25
+Nature: Impish
+- No Retreat
+- Iron Defense
+- Iron Head
+- Body Press
+
+Hariyama @ Flame Orb
+Ability: Guts
+Level: 25
+Nature: Adamant
+- Fake Out
+- Bulk Up
+- Drain Punch
+- Rock Tomb
+
 === TRAINER_WATTSON_1 ===
 Name: WATTSON
 Class: Leader

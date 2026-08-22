@@ -133,7 +133,26 @@ DewfordTown_Gym_EventScript_StopCountingTrainers::
 	return
 
 DewfordTown_Gym_EventScript_Brawly::
-	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_DEWFORD_GYM, DewfordTown_Gym_EventScript_BrawlyPostGym
+	msgbox DewfordTown_Gym_Text_BrawlyIntro, MSGBOX_DEFAULT
+	msgbox DewfordTown_Gym_Text_BrawlyTeamChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, DewfordTown_Gym_EventScript_BrawlyBattleMathieu
+	goto DewfordTown_Gym_EventScript_BrawlyBattleOriginal
+	end
+
+DewfordTown_Gym_EventScript_BrawlyBattleOriginal::
+	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyAcceptOriginal, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+	goto DewfordTown_Gym_EventScript_BrawlyPostGym
+	end
+
+DewfordTown_Gym_EventScript_BrawlyBattleMathieu::
+	trainerbattle_single TRAINER_BRAWLY_MATHIEU, DewfordTown_Gym_Text_BrawlyAcceptMathieu, DewfordTown_Gym_Text_BrawlyMathieuDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+	goto DewfordTown_Gym_EventScript_BrawlyPostGym
+	end
+
+DewfordTown_Gym_EventScript_BrawlyPostGym::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_BrawlyRematch
 	goto_if_unset FLAG_RECEIVED_TM_BULK_UP, DewfordTown_Gym_EventScript_GiveBulkUp2
@@ -388,9 +407,32 @@ DewfordTown_Gym_Text_BrawlyIntro:
 	.string "So you wanted to challenge me?\n"
 	.string "Let me see what you're made of!$"
 
+DewfordTown_Gym_Text_BrawlyTeamChoice:
+	.string "Actually, I have prepared a second\n"
+	.string "team as well, put together by my\l"
+	.string "friend MATHIEU.\p"
+	.string "Would you like to battle that team\n"
+	.string "instead of my official GYM team?$"
+
+DewfordTown_Gym_Text_BrawlyAcceptOriginal:
+	.string "So you wanted to challenge me?\n"
+	.string "Let me see what you're made of!$"
+
+DewfordTown_Gym_Text_BrawlyAcceptMathieu:
+	.string "All right, let's see how you handle\n"
+	.string "MATHIEU's POKéMON!$"
+
 DewfordTown_Gym_Text_BrawlyDefeat:
 	.string "Whoah, wow! You made a much bigger\n"
 	.string "splash than I expected!\p"
+	.string "You swamped me!\p"
+	.string "Okay, you've got me.\n"
+	.string "Take this GYM BADGE!$"
+
+DewfordTown_Gym_Text_BrawlyMathieuDefeat:
+	.string "Whoah, wow! You made a much bigger\n"
+	.string "splash than I expected, even with\l"
+	.string "this team!\p"
 	.string "You swamped me!\p"
 	.string "Okay, you've got me.\n"
 	.string "Take this GYM BADGE!$"
