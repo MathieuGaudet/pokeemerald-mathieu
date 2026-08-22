@@ -1132,6 +1132,7 @@ static const struct MenuAction MultichoiceList_QuickMenu[] =
     {COMPOUND_STRING("FLY")},
     {COMPOUND_STRING("INFINITE REPEL")},
     {COMPOUND_STRING("POKé VIAL")},
+    {COMPOUND_STRING("PC")},
     {gText_Cancel2},
 };
 

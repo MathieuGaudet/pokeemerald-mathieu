@@ -4,7 +4,8 @@ QuickMenu_EventScript_Main::
 	case 0, QuickMenu_EventScript_Fly
 	case 1, QuickMenu_EventScript_ToggleInfiniteRepel
 	case 2, QuickMenu_EventScript_PokeVial
-	case 3, QuickMenu_EventScript_Cancel
+	case 3, QuickMenu_EventScript_PC
+	case 4, QuickMenu_EventScript_Cancel
 	case MULTI_B_PRESSED, QuickMenu_EventScript_Cancel
 	end
 
@@ -33,6 +34,10 @@ QuickMenu_EventScript_InfiniteRepelOn::
 
 QuickMenu_EventScript_PokeVial::
 	call Common_EventScript_OutOfCenterPartyHeal
+	end
+
+QuickMenu_EventScript_PC::
+	goto EventScript_PC
 	end
 
 QuickMenu_EventScript_Cancel::
