@@ -69,6 +69,13 @@
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_DEPTHS_B4F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_MATHIEU_HOUSE_2",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],
