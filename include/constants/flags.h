@@ -61,8 +61,8 @@
 #define FLAG_RECEIVED_WINONA_MEGA_STONES        0x27
 #define FLAG_RECEIVED_TATE_AND_LIZA_MEGA_STONES 0x28
 #define FLAG_RECEIVED_JUAN_MEGA_STONES          0x29
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_RECEIVED_GIFT_STARLY  0x2A
+#define FLAG_RECEIVED_GIFT_HONEDGE 0x2B
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
