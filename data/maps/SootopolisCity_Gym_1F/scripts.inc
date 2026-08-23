@@ -80,7 +80,26 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce:
 	step_end
 
 SootopolisCity_Gym_1F_EventScript_Juan::
-	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_SOOTOPOLIS_GYM, SootopolisCity_Gym_1F_EventScript_JuanPostGym
+	msgbox SootopolisCity_Gym_1F_Text_JuanIntro, MSGBOX_DEFAULT
+	msgbox SootopolisCity_Gym_1F_Text_JuanTeamChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, SootopolisCity_Gym_1F_EventScript_JuanBattleMathieu
+	goto SootopolisCity_Gym_1F_EventScript_JuanBattleOriginal
+	end
+
+SootopolisCity_Gym_1F_EventScript_JuanBattleOriginal::
+	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanAcceptOriginal, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+	goto SootopolisCity_Gym_1F_EventScript_JuanPostGym
+	end
+
+SootopolisCity_Gym_1F_EventScript_JuanBattleMathieu::
+	trainerbattle_single TRAINER_JUAN_5, SootopolisCity_Gym_1F_Text_JuanAcceptMathieu, SootopolisCity_Gym_1F_Text_JuanMathieuDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+	goto SootopolisCity_Gym_1F_EventScript_JuanPostGym
+	end
+
+SootopolisCity_Gym_1F_EventScript_JuanPostGym::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_JuanRematch
 	goto_if_unset FLAG_RECEIVED_TM_WATER_PULSE, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2
@@ -247,6 +266,21 @@ SootopolisCity_Gym_1F_Text_JuanIntro:
 	.string "A grand illusion of water sculpted\n"
 	.string "by POKéMON and myself!$"
 
+SootopolisCity_Gym_1F_Text_JuanTeamChoice:
+	.string "Actually, I have prepared a second\n"
+	.string "team as well, put together by my\l"
+	.string "friend MATHIEU.\p"
+	.string "Would you like to battle that team\n"
+	.string "instead of my official GYM team?$"
+
+SootopolisCity_Gym_1F_Text_JuanAcceptOriginal:
+	.string "Ah, but enough chatter.\n"
+	.string "Let us begin our match, shall we?$"
+
+SootopolisCity_Gym_1F_Text_JuanAcceptMathieu:
+	.string "All right, let's see how you handle\n"
+	.string "MATHIEU's POKéMON!$"
+
 @ NOTE: This defeat text actually causes a buffer overflow. It's about 50 bytes too long for
 @ the gDisplayedStringBattle buffer that it's put into, and it stomps all over the gBattleTextBuffs
 @ after, as well as the otherwise unused array after that. One wonders if that's the reason for
@@ -265,6 +299,14 @@ SootopolisCity_Gym_1F_Text_JuanDefeat:
 	.string "Hahaha, I merely jest!\p"
 	.string "Rather than my clothes, I shall reward\n"
 	.string "you with this, the RAIN BADGE!$"
+
+SootopolisCity_Gym_1F_Text_JuanMathieuDefeat:
+	.string "Ahahaha, excellent!\n"
+	.string "Very well, you are the winner.\p"
+	.string "Even with this team, I sense the\n"
+	.string "brilliant shine of skill in you.\p"
+	.string "I shall reward you with this,\n"
+	.string "the RAIN BADGE!$"
 
 SootopolisCity_Gym_1F_Text_ReceivedRainBadge:
 	.string "{PLAYER} received the RAIN BADGE\n"

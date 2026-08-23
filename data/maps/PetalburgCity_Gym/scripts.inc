@@ -371,7 +371,22 @@ PetalburgCity_Gym_EventScript_GiveEnigmaBerry::
 
 PetalburgCity_Gym_EventScript_NormanBattle::
 	msgbox PetalburgCity_Gym_Text_NormanIntro, MSGBOX_DEFAULT
+	msgbox PetalburgCity_Gym_Text_NormanTeamChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_NormanBattleMathieu
+	goto PetalburgCity_Gym_EventScript_NormanBattleOriginal
+	end
+
+PetalburgCity_Gym_EventScript_NormanBattleOriginal::
 	trainerbattle_no_intro TRAINER_NORMAN_1, PetalburgCity_Gym_Text_NormanDefeat
+	goto PetalburgCity_Gym_EventScript_NormanPostGymBattle
+	end
+
+PetalburgCity_Gym_EventScript_NormanBattleMathieu::
+	trainerbattle_no_intro TRAINER_NORMAN_5, PetalburgCity_Gym_Text_NormanMathieuDefeat
+	goto PetalburgCity_Gym_EventScript_NormanPostGymBattle
+	end
+
+PetalburgCity_Gym_EventScript_NormanPostGymBattle::
 	message PetalburgCity_Gym_Text_ReceivedBalanceBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -1312,10 +1327,26 @@ PetalburgCity_Gym_Text_NormanIntro:
 	.string "{PLAYER}, you'd better give it your\n"
 	.string "best shot, too!$"
 
+PetalburgCity_Gym_Text_NormanTeamChoice:
+	.string "DAD: Actually, I have prepared a\n"
+	.string "second team as well, put together\l"
+	.string "by my friend MATHIEU.\p"
+	.string "Would you like to battle that team\n"
+	.string "instead of my official GYM team?$"
+
 PetalburgCity_Gym_Text_NormanDefeat:
 	.string "…\p"
 	.string "I… I can't…\p"
 	.string "I can't believe it. {PLAYER}…\p"
+	.string "I lost to {PLAYER}?\p"
+	.string "But, rules are rules!\n"
+	.string "Here, take this.$"
+
+PetalburgCity_Gym_Text_NormanMathieuDefeat:
+	.string "…\p"
+	.string "I… I can't…\p"
+	.string "I can't believe it, even with this\n"
+	.string "team. {PLAYER}…\p"
 	.string "I lost to {PLAYER}?\p"
 	.string "But, rules are rules!\n"
 	.string "Here, take this.$"

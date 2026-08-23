@@ -74,7 +74,26 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 	end
 
 MauvilleCity_Gym_EventScript_Wattson::
-	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_WattsonPostGym
+	msgbox MauvilleCity_Gym_Text_WattsonIntro, MSGBOX_DEFAULT
+	msgbox MauvilleCity_Gym_Text_WattsonTeamChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, MauvilleCity_Gym_EventScript_WattsonBattleMathieu
+	goto MauvilleCity_Gym_EventScript_WattsonBattleOriginal
+	end
+
+MauvilleCity_Gym_EventScript_WattsonBattleOriginal::
+	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonAcceptOriginal, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
+	goto MauvilleCity_Gym_EventScript_WattsonPostGym
+	end
+
+MauvilleCity_Gym_EventScript_WattsonBattleMathieu::
+	trainerbattle_single TRAINER_WATTSON_MATHIEU, MauvilleCity_Gym_Text_WattsonAcceptMathieu, MauvilleCity_Gym_Text_WattsonMathieuDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
+	goto MauvilleCity_Gym_EventScript_WattsonPostGym
+	end
+
+MauvilleCity_Gym_EventScript_WattsonPostGym::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_WattsonRematch
 	goto_if_unset FLAG_RECEIVED_TM_SHOCK_WAVE, MauvilleCity_Gym_EventScript_GiveShockWave2
@@ -345,9 +364,31 @@ MauvilleCity_Gym_Text_WattsonIntro:
 	.string "Then, I, WATTSON, the LEADER of\n"
 	.string "MAUVILLE GYM, shall electrify you!$"
 
+MauvilleCity_Gym_Text_WattsonTeamChoice:
+	.string "Actually, I have prepared a second\n"
+	.string "team as well, put together by my\l"
+	.string "friend MATHIEU.\p"
+	.string "Would you like to battle that team\n"
+	.string "instead of my official GYM team?$"
+
+MauvilleCity_Gym_Text_WattsonAcceptOriginal:
+	.string "Wahahahah!\n"
+	.string "Very well! Let's begin!$"
+
+MauvilleCity_Gym_Text_WattsonAcceptMathieu:
+	.string "Wahahahah!\n"
+	.string "Let's see how you handle MATHIEU's\l"
+	.string "POKéMON!$"
+
 MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "Wahahahah!\n"
 	.string "Fine, I lost!\p"
+	.string "You ended up giving me a thrill!\n"
+	.string "Take this BADGE!$"
+
+MauvilleCity_Gym_Text_WattsonMathieuDefeat:
+	.string "Wahahahah!\n"
+	.string "Fine, I lost, even with this team!\p"
 	.string "You ended up giving me a thrill!\n"
 	.string "Take this BADGE!$"
 

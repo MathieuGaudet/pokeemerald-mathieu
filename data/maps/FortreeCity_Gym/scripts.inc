@@ -18,7 +18,26 @@ FortreeCity_Gym_EventScript_InitRotatingGates::
 	end
 
 FortreeCity_Gym_EventScript_Winona::
-	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaIntro, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_FORTREE_GYM, FortreeCity_Gym_EventScript_WinonaPostGym
+	msgbox FortreeCity_Gym_Text_WinonaIntro, MSGBOX_DEFAULT
+	msgbox FortreeCity_Gym_Text_WinonaTeamChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, FortreeCity_Gym_EventScript_WinonaBattleMathieu
+	goto FortreeCity_Gym_EventScript_WinonaBattleOriginal
+	end
+
+FortreeCity_Gym_EventScript_WinonaBattleOriginal::
+	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaAcceptOriginal, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
+	goto FortreeCity_Gym_EventScript_WinonaPostGym
+	end
+
+FortreeCity_Gym_EventScript_WinonaBattleMathieu::
+	trainerbattle_single TRAINER_WINONA_5, FortreeCity_Gym_Text_WinonaAcceptMathieu, FortreeCity_Gym_Text_WinonaMathieuDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
+	goto FortreeCity_Gym_EventScript_WinonaPostGym
+	end
+
+FortreeCity_Gym_EventScript_WinonaPostGym::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_WinonaRematch
 	goto_if_unset FLAG_RECEIVED_TM_AERIAL_ACE, FortreeCity_Gym_EventScript_GiveAerialAce2
@@ -286,10 +305,32 @@ FortreeCity_Gym_Text_WinonaIntro:
 	.string "Witness the elegant choreography\n"
 	.string "of BIRD POKéMON and I!$"
 
+FortreeCity_Gym_Text_WinonaTeamChoice:
+	.string "Actually, I have prepared a second\n"
+	.string "team as well, put together by my\l"
+	.string "friend MATHIEU.\p"
+	.string "Would you like to battle that team\n"
+	.string "instead of my official GYM team?$"
+
+FortreeCity_Gym_Text_WinonaAcceptOriginal:
+	.string "Very well.\n"
+	.string "Let us begin!$"
+
+FortreeCity_Gym_Text_WinonaAcceptMathieu:
+	.string "All right, let's see how you handle\n"
+	.string "MATHIEU's POKéMON!$"
+
 FortreeCity_Gym_Text_WinonaDefeat:
 	.string "Never before have I seen a TRAINER\n"
 	.string "command POKéMON with more grace\l"
 	.string "than I…\p"
+	.string "In recognition of your prowess,\n"
+	.string "I present to you this GYM BADGE.$"
+
+FortreeCity_Gym_Text_WinonaMathieuDefeat:
+	.string "Never before have I seen a TRAINER\n"
+	.string "command POKéMON with more grace\l"
+	.string "than I, even with this team…\p"
 	.string "In recognition of your prowess,\n"
 	.string "I present to you this GYM BADGE.$"
 

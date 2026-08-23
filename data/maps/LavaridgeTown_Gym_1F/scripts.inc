@@ -44,7 +44,26 @@ LavaridgeTown_Gym_1F_EventScript_EndCheckBuryTrainers::
 	return
 
 LavaridgeTown_Gym_1F_EventScript_Flannery::
-	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_LAVARIDGE_GYM, LavaridgeTown_Gym_1F_EventScript_FlanneryPostGym
+	msgbox LavaridgeTown_Gym_1F_Text_FlanneryIntro, MSGBOX_DEFAULT
+	msgbox LavaridgeTown_Gym_1F_Text_FlanneryTeamChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, LavaridgeTown_Gym_1F_EventScript_FlanneryBattleMathieu
+	goto LavaridgeTown_Gym_1F_EventScript_FlanneryBattleOriginal
+	end
+
+LavaridgeTown_Gym_1F_EventScript_FlanneryBattleOriginal::
+	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryAcceptOriginal, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
+	goto LavaridgeTown_Gym_1F_EventScript_FlanneryPostGym
+	end
+
+LavaridgeTown_Gym_1F_EventScript_FlanneryBattleMathieu::
+	trainerbattle_single TRAINER_FLANNERY_MATHIEU, LavaridgeTown_Gym_1F_Text_FlanneryAcceptMathieu, LavaridgeTown_Gym_1F_Text_FlanneryMathieuDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
+	goto LavaridgeTown_Gym_1F_EventScript_FlanneryPostGym
+	end
+
+LavaridgeTown_Gym_1F_EventScript_FlanneryPostGym::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_FlanneryRematch
 	goto_if_unset FLAG_RECEIVED_TM_OVERHEAT, LavaridgeTown_Gym_1F_EventScript_GiveOverheat2
@@ -365,9 +384,37 @@ LavaridgeTown_Gym_1F_Text_FlanneryIntro:
 	.string "father, I shall, uh…demonstrate the\l"
 	.string "hot moves we have honed on this land!$"
 
+LavaridgeTown_Gym_1F_Text_FlanneryTeamChoice:
+	.string "Actually, I have prepared a second\n"
+	.string "team as well, put together by my\l"
+	.string "friend MATHIEU.\p"
+	.string "Would you like to battle that team\n"
+	.string "instead of my official GYM team?$"
+
+LavaridgeTown_Gym_1F_Text_FlanneryAcceptOriginal:
+	.string "Very well! Let's demonstrate the\n"
+	.string "hot moves we have honed on this land!$"
+
+LavaridgeTown_Gym_1F_Text_FlanneryAcceptMathieu:
+	.string "All right, let's see how you handle\n"
+	.string "MATHIEU's POKéMON!$"
+
 LavaridgeTown_Gym_1F_Text_FlanneryDefeat:
 	.string "Oh…\n"
 	.string "I guess I was trying too hard…\p"
+	.string "I… I've only recently become\n"
+	.string "a GYM LEADER.\p"
+	.string "I tried too hard to be someone\n"
+	.string "I'm not.\p"
+	.string "I have to do things my natural way. If\n"
+	.string "I don't, my POKéMON will be confused.\p"
+	.string "Thanks for teaching me that.\n"
+	.string "For that, you deserve this.$"
+
+LavaridgeTown_Gym_1F_Text_FlanneryMathieuDefeat:
+	.string "Oh…\n"
+	.string "I guess I was trying too hard, even\l"
+	.string "with this team…\p"
 	.string "I… I've only recently become\n"
 	.string "a GYM LEADER.\p"
 	.string "I tried too hard to be someone\n"

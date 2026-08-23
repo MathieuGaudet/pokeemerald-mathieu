@@ -4594,7 +4594,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer / Force Setup First Turn
+AI: Smart Trainer / Force Setup First Turn
 Mugshot: Purple
 
 Mightyena
@@ -4645,7 +4645,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 Mugshot: Green
 
 Dusclops
@@ -4696,7 +4696,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 Mugshot: Pink
 
 Sealeo
@@ -4747,7 +4747,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 Mugshot: Blue
 
 Shelgon
@@ -4798,7 +4798,7 @@ Gender: Female
 Music: Female
 Items: Potion / Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Geodude
 Level: 12
@@ -4832,7 +4832,7 @@ Gender: Female
 Music: Female
 Items: Potion / Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Geodude-Alola @ Oran Berry
 Level: 14
@@ -4869,7 +4869,7 @@ Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Machop
 Level: 22
@@ -4903,7 +4903,7 @@ Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Machop @ Choice Band
 Ability: No Guard
@@ -4955,7 +4955,7 @@ Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Voltorb
 Level: 30
@@ -4989,6 +4989,57 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Shock Wave
 - Howl
 
+=== TRAINER_WATTSON_MATHIEU ===
+Name: WATTSON
+Class: Leader
+Pic: Leader Wattson
+Gender: Male
+Music: Male
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Smart Trainer
+
+Galvantula @ Focus Sash
+Ability: Unnerve
+Level: 34
+- Sticky Web
+- Discharge
+- Lunge
+- Electroweb
+
+Kilowattrel @ Choice Scarf
+Ability: Volt Absorb
+Level: 34
+Modest Nature
+IVs: 0 Atk
+- Air Slash
+- Discharge
+- Volt Switch
+
+Magneton @ Light Clay
+Ability: Sturdy
+Level: 34
+IVs: 0 Atk
+- Flash Cannon
+- Thunderbolt
+- Light Screen
+- Reflect
+
+Golem-Alola @ Choice Band
+Ability: Galvanize
+Level: 34
+- Explosion
+
+Lanturn @ Air Balloon
+Ability: Volt Absorb
+Level: 34
+Modest Nature
+IVs: 0 Atk
+- Scald
+- Electric Terrain
+- Electroweb
+- Thunderbolt
+
 === TRAINER_FLANNERY_1 ===
 Name: FLANNERY
 Class: Leader
@@ -4997,7 +5048,7 @@ Gender: Female
 Music: Female
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Numel
 Level: 42
@@ -5031,6 +5082,67 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Body Slam
 - Attract
 
+=== TRAINER_FLANNERY_MATHIEU ===
+Name: FLANNERY
+Class: Leader
+Pic: Leader Flannery
+Gender: Female
+Music: Female
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer
+
+Torkoal @ Heat Rock
+Ability: Drought
+Level: 47
+Relaxed Nature
+- Eruption
+- Body Press
+- Earthquake
+- Lava Plume
+
+Volcarona @ Heavy-Duty Boots
+Ability: Flame Body
+Level: 47
+- Quiver Dance
+- Bug Buzz
+- Fiery Dance
+- U-turn
+
+Ceruledge @ Focus Sash
+Ability: Weak Armor
+Level: 47
+Adamant Nature
+- Swords Dance
+- Bitter Blade
+- Close Combat
+- Shadow Sneak
+
+Talonflame @ Leftovers
+Ability: Gale Wings
+Level: 47
+- Brave Bird
+- Swords Dance
+- Roost
+- Flare Blitz
+
+Scovillain @ Scovillainite
+Ability: Chlorophyll
+Level: 47
+IVs: 0 Atk
+- Energy Ball
+- Overheat
+- Leech Seed
+- Protect
+
+Infernape @ Life Orb
+Ability: Iron Fist
+Level: 47
+- Close Combat
+- Fire Punch
+- Grass Knot
+- Fake Out
+
 === TRAINER_NORMAN_1 ===
 Name: NORMAN
 Class: Leader
@@ -5039,7 +5151,7 @@ Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Force Setup First Turn
 
 Spinda
 Level: 55
@@ -5081,7 +5193,7 @@ Gender: Female
 Music: Female
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer / Risky
+AI: Smart Trainer / Risky
 
 Swablu
 Level: 64
@@ -5131,7 +5243,7 @@ Gender: Male
 Music: Female
 Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Claydol
 Level: 75
@@ -5173,7 +5285,7 @@ Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Luvdisc
 Level: 77
@@ -6339,7 +6451,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 Mugshot: Yellow
 
 Wailord
@@ -14254,7 +14366,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Golem
 Level: 32
@@ -14296,7 +14408,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Omanyte
 Level: 37
@@ -14346,7 +14458,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Omastar
 Level: 42
@@ -14396,7 +14508,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Aerodactyl
 Level: 47
@@ -14454,7 +14566,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Machamp @ Sitrus Berry
 Level: 33
@@ -14496,7 +14608,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Machamp @ Sitrus Berry
 Level: 38
@@ -14538,7 +14650,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Hitmonchan
 Level: 40
@@ -14588,7 +14700,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Hitmonlee
 Level: 46
@@ -14646,7 +14758,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Mareep
 Level: 36
@@ -14688,7 +14800,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Pikachu
 Level: 39
@@ -14738,7 +14850,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Raichu
 Level: 44
@@ -14788,7 +14900,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Electabuzz
 Level: 50
@@ -14846,7 +14958,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Magcargo @ White Herb
 Level: 38
@@ -14888,7 +15000,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Growlithe
 Level: 41
@@ -14938,7 +15050,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Houndour
 Level: 46
@@ -14996,7 +15108,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Arcanine
 Level: 51
@@ -15054,7 +15166,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer / Force Setup First Turn
 
 Chansey
 Level: 42
@@ -15096,7 +15208,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer / Force Setup First Turn
 
 Slaking @ Sitrus Berry
 Level: 47
@@ -15146,7 +15258,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer / Force Setup First Turn
 
 Slaking @ Sitrus Berry
 Level: 52
@@ -15194,57 +15306,57 @@ Class: Leader
 Pic: Leader Norman
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Basic Trainer
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer / Force Setup First Turn
 
-Slaking @ Sitrus Berry
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Shadow Ball
-- Double Edge
-- Fire Blast
+Zoroark-Hisui @ Focus Sash
+Ability: Illusion
+Level: 59
+IVs: 0 Atk
+- Bitter Malice
+- Aura Sphere
+- Hyper Voice
+- Sludge Bomb
 
-Blissey
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Sing
-- Skill Swap
-- Focus Punch
+Snorlax @ Sitrus Berry
+Ability: Thick Fat
+Level: 59
+- Belly Drum
+- Extreme Speed
 
-Kangaskhan
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Kangaskhan @ Kangaskhanite
+Ability: Inner Focus
+Level: 59
 - Fake Out
-- Dizzy Punch
-- Endure
-- Reversal
+- Power-Up Punch
+- Double-Edge
+- Sucker Punch
 
-Tauros
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Take Down
-- Protect
-- Fire Blast
-- Earthquake
+Slaking @ Silk Scarf
+Ability: Truant
+Level: 59
+- Double-Edge
+- Play Rough
+- Knock Off
+- Slack Off
 
-Spinda
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Teeter Dance
-- Skill Swap
-- Facade
-- Hypnosis
+Lopunny @ Weakness Policy
+Ability: Cute Charm
+Level: 59
+Adamant Nature
+- Nuzzle
+- Swallow
+- Attract
+- Pound
 
-Slaking @ Sitrus Berry
-Level: 60
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hyper Beam
-- Flamethrower
-- Thunderbolt
-- Shadow Ball
+Bidoof @ Power Herb
+Ability: Simple
+Level: 59
+IVs: 0 Atk
+- Geomancy
+- Boomburst
+- Astral Barrage
 
 === TRAINER_WINONA_2 ===
 Name: WINONA
@@ -15254,7 +15366,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer / Risky
+AI: Smart Trainer / Risky
 
 Dratini @ Sitrus Berry
 Level: 40
@@ -15304,7 +15416,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer / Risky
+AI: Smart Trainer / Risky
 
 Hoothoot
 Level: 43
@@ -15362,7 +15474,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer / Risky
+AI: Smart Trainer / Risky
 
 Noctowl
 Level: 48
@@ -15418,57 +15530,67 @@ Class: Leader
 Pic: Leader Winona
 Gender: Female
 Music: Female
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Basic Trainer / Risky
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer
 
-Noctowl
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Psychic
-- Reflect
-- Dream Eater
-
-Tropius
-Level: 54
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
-- Earthquake
-
-Pelipper
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Supersonic
-- Protect
-- Aerial Ace
-
-Dragonite @ Sitrus Berry
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hyper Beam
-- Thunderbolt
-- Earthquake
-- Ice Beam
-
-Skarmory
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Whirlwind
+Gliscor @ Toxic Orb
+Ability: Poison Heal
+Level: 68
+Shiny: Yes
+Jolly Nature
 - Spikes
-- Steel Wing
-- Aerial Ace
-
-Altaria @ Chesto Berry
-Level: 60
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sky Attack
-- Rest
-- Dragon Dance
+- Knock Off
 - Earthquake
+- Protect
+
+Crobat @ Heavy-Duty Boots
+Ability: Infiltrator
+Level: 68
+Shiny: Yes
+Jolly Nature
+- Brave Bird
+- U-turn
+- Toxic
+- Roost
+
+Corviknight @ Leftovers
+Ability: Mirror Armor
+Level: 68
+Shiny: Yes
+Impish Nature
+IVs: 0 Atk
+- Body Press
+- Iron Defense
+- Roost
+
+Honchkrow @ Assault Vest
+Ability: Super Luck
+Level: 68
+Modest Nature
+IVs: 0 Atk
+- Oblivion Wing
+- Heat Wave
+- Foul Play
+- Dark Pulse
+
+Talonflame @ Choice Band
+Ability: Gale Wings
+Level: 68
+Shiny: Yes
+Adamant Nature
+- Flare Blitz
+- Brave Bird
+- U-turn
+
+Staraptor @ Staraptite
+Ability: Intimidate
+Level: 68
+Impish Nature
+- Close Combat
+- Roost
+- Brave Bird
+- Protect
 
 === TRAINER_TATE_AND_LIZA_2 ===
 Name: TATE&LIZA
@@ -15478,7 +15600,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Slowpoke
 Level: 48
@@ -15528,7 +15650,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Drowzee
 Level: 53
@@ -15586,7 +15708,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Hypno
 Level: 58
@@ -15642,57 +15764,64 @@ Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
 Music: Female
-Items: Full Restore / Full Restore / Full Restore
+Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
-Hypno
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Dream Eater
-- Headbutt
-- Protect
+Metagross @ Assault Vest
+Ability: Clear Body
+Level: 76
+Shiny: Yes
+Adamant Nature
+- Meteor Mash
+- Zen Headbutt
+- Knock Off
+- Bullet Punch
 
-Claydol
-Level: 64
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Explosion
+Tapu Lele @ Terrain Extender
+Ability: Psychic Surge
+Level: 76
+Timid Nature
+IVs: 0 Atk
+- Moonblast
 - Psychic
-- Light Screen
-
-Slowking
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Yawn
-- Psychic
-- Calm Mind
-- Protect
-
-Xatu @ Chesto Berry
-Level: 64
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Rest
-- Confuse Ray
+- Thunderbolt
 - Calm Mind
 
-Lunatone @ Chesto Berry
-Level: 65
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Psychic
-- Rest
+Armarouge @ Life Orb
+Ability: Weak Armor
+Level: 76
+IVs: 0 Atk
+- Armor Cannon
+- Expanding Force
+- Aura Sphere
+- Will-O-Wisp
+
+Gardevoir-Mega
+Ability: Pixilate
+Level: 76
+IVs: 0 Atk
+- Expanding Force
+- Hyper Voice
+- Draining Kiss
 - Calm Mind
 
-Solrock @ Sitrus Berry
-Level: 65
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sunny Day
-- Solar Beam
-- Psychic
-- Flamethrower
+Gallade-Mega (M)
+Ability: Sharpness
+Level: 76
+- Sacred Sword
+- Psycho Cut
+- Night Slash
+- Swords Dance
+
+Farigiraf @ Throat Spray
+Ability: Armor Tail
+Level: 76
+IVs: 0 Atk
+- Hyper Voice
+- Expanding Force
+- Thunderbolt
+- Trick Room
 
 === TRAINER_JUAN_2 ===
 Name: JUAN
@@ -15702,7 +15831,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Poliwag
 Level: 46
@@ -15752,7 +15881,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Poliwhirl
 Level: 50
@@ -15802,7 +15931,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Lapras
 Level: 56
@@ -15858,57 +15987,62 @@ Class: Leader
 Pic: Leader Juan
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Basic Trainer
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer
 
-Lapras
-Level: 61
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hydro Pump
-- Perish Song
+Politoed @ Damp Rock
+Ability: Drizzle
+Level: 82
+IVs: 0 Atk
+- Weather Ball
+- Scald
 - Ice Beam
-- Confuse Ray
+- Thunder
 
-Whiscash
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
+Gastrodon-East @ Leftovers
+Ability: Storm Drain
+Level: 82
+Bold Nature
+IVs: 0 Atk
+- Earth Power
+- Scald
+- Recover
+- Toxic
 
-Politoed
-Level: 61
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Hydro Pump
-- Perish Song
-
-Walrein
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Sheer Cold
-
-Crawdaunt @ Chesto Berry
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Guillotine
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
-Level: 66
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
+Greninja @ Life Orb
+Ability: Protean
+Level: 82
+Shiny: Yes
 - Ice Beam
-- Rest
+- Water Shuriken
+- Dark Pulse
+- U-turn
+
+Basculegion @ Choice Band
+Ability: Swift Swim
+Level: 82
+Shiny: Yes
+- Wave Crash
+- Last Respects
+- Flip Turn
+
+Kilowattrel @ Choice Specs
+Ability: Volt Absorb
+Level: 82
+Timid Nature
+IVs: 0 Atk
+- Thunder
+- Hurricane
+- Volt Switch
+
+Swampert @ Swampertite
+Ability: Torrent
+Level: 82
+- Waterfall
+- Earthquake
+- Ice Punch
+- Superpower
 
 === TRAINER_ANGELO ===
 Name: ANGELO
@@ -15954,7 +16088,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Skarmory
 Level: 77

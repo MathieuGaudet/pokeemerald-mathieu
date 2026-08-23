@@ -54,7 +54,26 @@ MossdeepCity_Gym_EventScript_SetSwitch4Metatiles::
 	end
 
 MossdeepCity_Gym_EventScript_TateAndLiza::
-	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_MOSSDEEP_GYM, MossdeepCity_Gym_EventScript_TateAndLizaPostGym
+	msgbox MossdeepCity_Gym_Text_TateAndLizaIntro, MSGBOX_DEFAULT
+	msgbox MossdeepCity_Gym_Text_TateAndLizaTeamChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, MossdeepCity_Gym_EventScript_TateAndLizaBattleMathieu
+	goto MossdeepCity_Gym_EventScript_TateAndLizaBattleOriginal
+	end
+
+MossdeepCity_Gym_EventScript_TateAndLizaBattleOriginal::
+	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaAcceptOriginal, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
+	goto MossdeepCity_Gym_EventScript_TateAndLizaPostGym
+	end
+
+MossdeepCity_Gym_EventScript_TateAndLizaBattleMathieu::
+	trainerbattle_double TRAINER_TATE_AND_LIZA_5, MossdeepCity_Gym_Text_TateAndLizaAcceptMathieu, MossdeepCity_Gym_Text_TateAndLizaMathieuDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
+	goto MossdeepCity_Gym_EventScript_TateAndLizaPostGym
+	end
+
+MossdeepCity_Gym_EventScript_TateAndLizaPostGym::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLizaRematch
 	goto_if_unset FLAG_RECEIVED_TM_CALM_MIND, MossdeepCity_Gym_EventScript_GiveCalmMind2
@@ -610,9 +629,34 @@ MossdeepCity_Gym_Text_TateAndLizaIntro:
 	.string "TATE: This combination of ours…\n"
 	.string "LIZA: Can you beat it?$"
 
+MossdeepCity_Gym_Text_TateAndLizaTeamChoice:
+	.string "TATE: Actually, we have prepared…\n"
+	.string "LIZA: A second team as well…\p"
+	.string "TATE: Put together by our friend…\n"
+	.string "LIZA: MATHIEU!\p"
+	.string "TATE: Would you like to battle that\n"
+	.string "team instead…\l"
+	.string "LIZA: Of our official GYM team?$"
+
+MossdeepCity_Gym_Text_TateAndLizaAcceptOriginal:
+	.string "TATE: Very well!\n"
+	.string "LIZA: Let's begin!$"
+
+MossdeepCity_Gym_Text_TateAndLizaAcceptMathieu:
+	.string "TATE: All right, let's see…\n"
+	.string "LIZA: How you handle MATHIEU's\l"
+	.string "POKéMON!$"
+
 MossdeepCity_Gym_Text_TateAndLizaDefeat:
 	.string "TATE: What?! Our combination…\n"
 	.string "LIZA: Was shattered!\p"
+	.string "TATE: It can't be helped. You've won…\n"
+	.string "LIZA: So, in recognition, take this.$"
+
+MossdeepCity_Gym_Text_TateAndLizaMathieuDefeat:
+	.string "TATE: What?! Our combination…\n"
+	.string "LIZA: Was shattered, even with this\l"
+	.string "team!\p"
 	.string "TATE: It can't be helped. You've won…\n"
 	.string "LIZA: So, in recognition, take this.$"
 

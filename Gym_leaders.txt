@@ -1,0 +1,352 @@
+Brawly:
+Machop @ Choice Band  
+Ability: No Guard  
+Level: 23  
+Jolly Nature  
+- Dynamic Punch  
+
+Hitmontop @ Expert Belt  
+Ability: Intimidate  
+Level: 24  
+Adamant Nature  
+- Fake Out  
+- Sucker Punch  
+- Low Sweep  
+- Triple Axel  
+
+Monferno @ Air Balloon  
+Ability: Iron Fist  
+Level: 25  
+Adamant Nature  
+- Fire Punch  
+- Knock Off  
+- Mach Punch  
+- Rock Tomb  
+
+Falinks @ Leftovers  
+Ability: Battle Armor  
+Level: 25  
+Impish Nature  
+- No Retreat  
+- Iron Defense  
+- Iron Head  
+- Body Press  
+
+Hariyama @ Flame Orb  
+Ability: Guts  
+Level: 25  
+Adamant Nature  
+- Fake Out  
+- Bulk Up  
+- Drain Punch  
+- Rock Tomb  
+
+
+
+Watson:
+Galvantula @ Focus Sash  
+Ability: Unnerve  
+Level: 34  
+- Sticky Web  
+- Discharge  
+- Lunge  
+- Electroweb  
+
+Kilowattrel @ Choice Scarf  
+Ability: Volt Absorb  
+Level: 34  
+Modest Nature  
+IVs: 0 Atk  
+- Air Slash  
+- Discharge  
+- Volt Switch  
+
+Magneton @ Light Clay  
+Ability: Sturdy  
+Level: 34  
+IVs: 0 Atk  
+- Flash Cannon  
+- Thunderbolt  
+- Light Screen  
+- Reflect  
+
+Golem-Alola @ Choice Band  
+Ability: Galvanize  
+- Explosion  
+
+Lanturn @ Air Balloon  
+Ability: Volt Absorb  
+Level: 34  
+Modest Nature  
+IVs: 0 Atk  
+- Scald  
+- Electric Terrain  
+- Electroweb  
+- Thunderbolt  
+
+
+Flannery:
+Torkoal @ Heat Rock  
+Ability: Drought  
+Level: 47  
+Relaxed Nature  
+- Eruption  
+- Body Press  
+- Earthquake  
+- Lava Plume  
+
+Volcarona @ Heavy-Duty Boots  
+Ability: Flame Body  
+Level: 47  
+- Quiver Dance  
+- Bug Buzz  
+- Fiery Dance  
+- U-turn  
+
+Ceruledge @ Focus Sash  
+Ability: Weak Armor  
+Level: 47  
+Adamant Nature  
+- Swords Dance  
+- Bitter Blade  
+- Close Combat  
+- Shadow Sneak  
+
+Talonflame @ Leftovers  
+Ability: Gale Wings  
+Level: 47  
+- Brave Bird  
+- Swords Dance  
+- Roost  
+- Flare Blitz  
+
+Scovillain @ Scovillainite  
+Ability: Chlorophyll  
+IVs: 0 Atk  
+- Energy Ball  
+- Overheat  
+- Leech Seed  
+- Protect  
+
+Infernape @ Life Orb  
+Ability: Iron Fist  
+Level: 47  
+- Close Combat  
+- Fire Punch  
+- Grass Knot  
+- Fake Out  
+
+Zoroark-Hisui @ Focus Sash  
+Ability: Illusion  
+Level: 59  
+IVs: 0 Atk  
+- Bitter Malice  
+- Aura Sphere  
+- Hyper Voice  
+- Sludge Bomb  
+
+Snorlax @ Sitrus Berry
+Ability: Thick Fat
+Level: 59
+- Belly Drum
+- Extreme Speed
+
+Kangaskhan @ Kangaskhanite
+Ability: Inner Focus
+Level: 59
+- Fake Out
+- Power-Up Punch
+- Double-Edge
+- Sucker Punch
+
+Slaking @ Silk Scarf
+Ability: Truant
+Level: 59
+- Double-Edge
+- Play Rough
+- Knock Off
+- Slack Off
+
+Lopunny @ Weakness Policy
+Ability: Cute Charm
+Level: 59
+Adamant Nature
+- Nuzzle
+- Swallow
+- Attract
+- Pound
+
+Bidoof @ Power Herb
+Ability: Simple
+Level: 59
+IVs: 0 Atk
+- Geomancy
+- Boomburst
+- Astral Barrage
+
+
+Winona:
+Gliscor @ Toxic Orb  
+Ability: Poison Heal  
+Level: 68  
+Shiny: Yes  
+Jolly Nature  
+- Spikes  
+- Knock Off  
+- Earthquake  
+- Protect  
+
+Crobat @ Heavy-Duty Boots  
+Ability: Infiltrator  
+Level: 68  
+Shiny: Yes  
+Jolly Nature  
+- Brave Bird  
+- U-turn  
+- Toxic  
+- Roost  
+
+Corviknight @ Leftovers  
+Ability: Mirror Armor  
+Level: 68  
+Shiny: Yes  
+Impish Nature  
+IVs: 0 Atk  
+- Body Press  
+- Iron Defense  
+- Roost  
+
+Honchkrow @ Assault Vest  
+Ability: Super Luck  
+Level: 68  
+Modest Nature  
+IVs: 0 Atk  
+- Oblivion Wing  
+- Heat Wave  
+- Foul Play  
+- Dark Pulse  
+
+Talonflame @ Choice Band  
+Ability: Gale Wings  
+Level: 68  
+Shiny: Yes  
+Adamant Nature  
+- Flare Blitz  
+- Brave Bird  
+- U-turn  
+
+Staraptor @ Staraptite  
+Ability: Intimidate  
+Impish Nature  
+- Close Combat  
+- Roost  
+- Brave Bird  
+- Protect  
+
+Tate & Liza:
+Metagross @ Assault Vest  
+Ability: Clear Body  
+Shiny: Yes  
+Adamant Nature  
+- Meteor Mash  
+- Zen Headbutt  
+- Knock Off  
+- Bullet Punch  
+
+Tapu Lele @ Terrain Extender  
+Ability: Psychic Surge  
+Timid Nature  
+IVs: 0 Atk  
+- Moonblast  
+- Psychic  
+- Thunderbolt  
+- Calm Mind  
+
+Armarouge @ Life Orb  
+Ability: Weak Armor  
+IVs: 0 Atk  
+- Armor Cannon  
+- Expanding Force  
+- Aura Sphere  
+- Will-O-Wisp  
+
+Gardevoir-Mega
+Ability: Pixilate
+IVs: 0 Atk  
+- Expanding Force  
+- Hyper Voice  
+- Draining Kiss  
+- Calm Mind  
+
+Gallade-Mega (M)
+Ability: Sharpness
+- Sacred Sword  
+- Psycho Cut  
+- Night Slash  
+- Swords Dance  
+
+Farigiraf @ Throat Spray  
+Ability: Armor Tail  
+IVs: 0 Atk  
+- Hyper Voice  
+- Expanding Force  
+- Thunderbolt  
+- Trick Room  
+
+
+
+
+Juan:
+Politoed @ Damp Rock  
+Ability: Drizzle  
+Level: 82  
+IVs: 0 Atk  
+- Weather Ball  
+- Scald  
+- Ice Beam  
+- Thunder  
+
+Gastrodon-East @ Leftovers  
+Ability: Storm Drain  
+Level: 82  
+Bold Nature  
+IVs: 0 Atk  
+- Earth Power  
+- Scald  
+- Recover  
+- Toxic  
+
+Greninja @ Life Orb  
+Ability: Protean  
+Level: 82  
+Shiny: Yes  
+- Ice Beam  
+- Water Shuriken  
+- Dark Pulse  
+- U-turn  
+
+Basculegion @ Choice Band  
+Ability: Swift Swim  
+Level: 82  
+Shiny: Yes  
+- Wave Crash  
+- Last Respects  
+- Flip Turn  
+
+Kilowattrel @ Choice Specs  
+Ability: Volt Absorb  
+Level: 82  
+Timid Nature  
+IVs: 0 Atk  
+- Thunder  
+- Hurricane  
+- Volt Switch  
+
+Swampert-Mega @ Swampertite  
+Ability: Swift Swim  
+Level: 82  
+- Waterfall  
+- Earthquake  
+- Ice Punch  
+- Superpower  
+
