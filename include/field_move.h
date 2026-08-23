@@ -34,4 +34,24 @@ static inline u32 FieldMove_GetPartyMsgID(enum FieldMove fieldMove)
     return gFieldMoveInfo[fieldMove].partyMsgID;
 }
 
+static inline bool32 FieldMove_IsHM(enum FieldMove fieldMove)
+{
+    switch (fieldMove)
+    {
+    case FIELD_MOVE_CUT:
+    case FIELD_MOVE_FLASH:
+    case FIELD_MOVE_ROCK_SMASH:
+    case FIELD_MOVE_STRENGTH:
+    case FIELD_MOVE_SURF:
+    case FIELD_MOVE_FLY:
+    case FIELD_MOVE_DIVE:
+    case FIELD_MOVE_WATERFALL:
+    case FIELD_MOVE_ROCK_CLIMB:
+    case FIELD_MOVE_DEFOG:
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
 #endif //GUARD_FIELD_MOVE_H

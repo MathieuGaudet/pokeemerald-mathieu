@@ -2950,6 +2950,7 @@ static void SetPartyMonSelectionActions(struct Pokemon *mons, u8 slotId, u8 acti
 static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 {
     u8 i, j;
+    u32 addedFieldMoves = 0;
 
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
@@ -2962,8 +2963,21 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1) == FieldMove_GetMoveId(j))
             {
                 AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+                addedFieldMoves |= 1 << j;
                 break;
             }
+        }
+    }
+
+    // Also list HM field moves the species can learn even if it doesn't currently know the move
+    if (OW_HM_WITHOUT_TEACHING)
+    {
+        enum Species species = GetMonData(&mons[slotId], MON_DATA_SPECIES);
+
+        for (j = 0; j != FIELD_MOVES_COUNT; j++)
+        {
+            if (!(addedFieldMoves & (1 << j)) && FieldMove_IsHM(j) && CanLearnTeachableMove(species, FieldMove_GetMoveId(j)))
+                AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
         }
     }
 
