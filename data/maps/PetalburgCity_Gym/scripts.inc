@@ -382,7 +382,7 @@ PetalburgCity_Gym_EventScript_NormanBattleOriginal::
 	end
 
 PetalburgCity_Gym_EventScript_NormanBattleMathieu::
-	trainerbattle_no_intro TRAINER_NORMAN_5, PetalburgCity_Gym_Text_NormanMathieuDefeat
+	trainerbattle_no_intro TRAINER_NORMAN_MATHIEU, PetalburgCity_Gym_Text_NormanMathieuDefeat
 	goto PetalburgCity_Gym_EventScript_NormanPostGymBattle
 	end
 

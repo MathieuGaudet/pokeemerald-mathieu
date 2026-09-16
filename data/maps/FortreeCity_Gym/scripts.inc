@@ -33,7 +33,7 @@ FortreeCity_Gym_EventScript_WinonaBattleOriginal::
 	end
 
 FortreeCity_Gym_EventScript_WinonaBattleMathieu::
-	trainerbattle_single TRAINER_WINONA_5, FortreeCity_Gym_Text_WinonaAcceptMathieu, FortreeCity_Gym_Text_WinonaMathieuDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_WINONA_MATHIEU, FortreeCity_Gym_Text_WinonaAcceptMathieu, FortreeCity_Gym_Text_WinonaMathieuDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
 	goto FortreeCity_Gym_EventScript_WinonaPostGym
 	end
 
