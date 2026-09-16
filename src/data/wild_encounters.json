@@ -1894,9 +1894,9 @@
             "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_SHROOMISH"
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_JOLTIK"
               },
               {
                 "min_level": 5,
@@ -1944,9 +1944,9 @@
                 "species": "SPECIES_SWINUB"
               },
               {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_JOLTIK"
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SHROOMISH"
               },
               {
                 "min_level": 6,
