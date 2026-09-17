@@ -4755,48 +4755,18 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Force Setup First Turn
 Mugshot: Blue
 
-Shelgon
-Level: 81
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Rock Tomb
-- Dragon Claw
-- Protect
-- Double Edge
-
-Altaria
-Level: 83
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Double Edge
-- Dragon Breath
+Rayquaza-Mega @ Life Orb
+Ability: Delta Stream
+Level: 85
+Shiny: Yes
+Adamant Nature
+- Dragon Ascent
 - Dragon Dance
-- Aerial Ace
-
-Kingdra
-Level: 82
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Smokescreen
-- Dragon Dance
-- Surf
-- Body Slam
-
-Flygon
-Level: 82
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Flamethrower
-- Crunch
-- Dragon Breath
-- Earthquake
-
-Salamence @ Sitrus Berry
-Level: 84
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Dragon Claw
-- Rock Slide
-- Crunch
+- V-create
+- Extreme Speed
 
 === TRAINER_ROXANNE_1 ===
 Name: ROXANNE
