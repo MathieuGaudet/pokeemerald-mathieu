@@ -1140,6 +1140,8 @@ static const struct MenuAction MultichoiceList_MathieuGiftMon[] =
 {
     {COMPOUND_STRING("STARLY")},
     {COMPOUND_STRING("HONEDGE")},
+    {COMPOUND_STRING("WOOPER")},
+    {COMPOUND_STRING("POLTCHAGEIST")},
     {gText_Cancel2},
 };
 
